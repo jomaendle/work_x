@@ -1,0 +1,72 @@
+html {
+  background: linear-gradient(180deg, #04547e 20%, #35b9eb);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  grid-template-areas: "header" "main";
+  grid-template-rows: 1fr 3fr;
+}
+
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .studysmarter-logo {
+  width: 400px;
+}
+
+main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+main .main-links, main .additional-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+main .main-links a, main .additional-links a {
+  display: flex;
+  border: solid 2px rgba(255, 255, 255, 0.2);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+main .main-links a:visited, main .main-links a:hover, main .main-links a:active, main .additional-links a:visited, main .additional-links a:hover, main .additional-links a:active {
+  color: white;
+}
+main .main-links a:hover, main .additional-links a:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+main .main-links a img, main .additional-links a img {
+  max-width: 82px;
+  max-height: 82px;
+}
+main .main-links a img.localhost-logo, main .additional-links a img.localhost-logo {
+  filter: saturate(0.1);
+}
+main .main-links a img.icon-font-logo, main .additional-links a img.icon-font-logo {
+  filter: hue-rotate(45deg);
+}
+main .additional-links {
+  display: flex;
+  gap: 1rem;
+}
+
+/*# sourceMappingURL=styles.css.map */
