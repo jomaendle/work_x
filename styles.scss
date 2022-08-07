@@ -1,3 +1,7 @@
+:root {
+  --icon-size: 64px;
+}
+
 html {
   background: linear-gradient(180deg, #04547e 20%, #35b9eb);
 }
@@ -9,6 +13,7 @@ html, body {
 
 body {
   display: grid;
+  justify-content: center;
   grid-template-areas: "header" "main";
   grid-template-rows: 1fr 3fr;
 }
@@ -28,11 +33,26 @@ main {
   grid-area: main;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  max-width: 880px;
+
+  h3 {
+    color: white;
+    font-weight: 400;
+    font-size: 1.5em;
+  }
+
+  .main-links {
+    margin-bottom: 2rem;
+
+    a {
+      background: rgba(0,0,0,0.3);
+      width: 140px;
+    }
+  }
 
   .main-links, .additional-links {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     gap: 1rem;
 
@@ -54,12 +74,14 @@ main {
       }
 
       &:hover {
+        transition: all 0.1s ease-in;
         background: rgba(0,0,0,0.1);
+        border-color: rgba(255, 255, 255, 0.4) ;
       }
 
       img {
-        max-width: 82px;
-        max-height: 82px;
+        max-width: var(--icon-size);
+        max-height: var(--icon-size);
 
         &.localhost-logo {
           filter: saturate(0.1);
@@ -67,6 +89,10 @@ main {
 
         &.icon-font-logo {
           filter: hue-rotate(45deg);
+        }
+
+        &.icon-color-logo {
+          animation:hue 5s infinite linear;
         }
       }
     }
@@ -78,4 +104,16 @@ main {
 
   }
 
+}
+
+@keyframes hue  {
+  from {
+    filter:hue-rotate(0deg);
+    -webkit-filter:hue-rotate(0deg);
+  }
+
+  to {
+    filter:hue-rotate(360deg);
+    -webkit-filter:hue-rotate(360deg);
+  }
 }

@@ -1,3 +1,7 @@
+:root {
+  --icon-size: 64px;
+}
+
 html {
   background: linear-gradient(180deg, #04547e 20%, #35b9eb);
 }
@@ -9,6 +13,7 @@ html, body {
 
 body {
   display: grid;
+  justify-content: center;
   grid-template-areas: "header" "main";
   grid-template-rows: 1fr 3fr;
 }
@@ -27,11 +32,23 @@ main {
   grid-area: main;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  max-width: 880px;
+}
+main h3 {
+  color: white;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+main .main-links {
+  margin-bottom: 2rem;
+}
+main .main-links a {
+  background: rgba(0, 0, 0, 0.3);
+  width: 140px;
 }
 main .main-links, main .additional-links {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 1rem;
 }
@@ -52,11 +69,13 @@ main .main-links a:visited, main .main-links a:hover, main .main-links a:active,
   color: white;
 }
 main .main-links a:hover, main .additional-links a:hover {
+  transition: all 0.1s ease-in;
   background: rgba(0, 0, 0, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 main .main-links a img, main .additional-links a img {
-  max-width: 82px;
-  max-height: 82px;
+  max-width: var(--icon-size);
+  max-height: var(--icon-size);
 }
 main .main-links a img.localhost-logo, main .additional-links a img.localhost-logo {
   filter: saturate(0.1);
@@ -64,9 +83,23 @@ main .main-links a img.localhost-logo, main .additional-links a img.localhost-lo
 main .main-links a img.icon-font-logo, main .additional-links a img.icon-font-logo {
   filter: hue-rotate(45deg);
 }
+main .main-links a img.icon-color-logo, main .additional-links a img.icon-color-logo {
+  animation: hue 5s infinite linear;
+}
 main .additional-links {
   display: flex;
   gap: 1rem;
+}
+
+@keyframes hue {
+  from {
+    filter: hue-rotate(0deg);
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+    -webkit-filter: hue-rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
