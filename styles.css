@@ -9,6 +9,11 @@ html {
 html, body {
   height: 100%;
   margin: 0;
+  color: white;
+}
+
+a, a:active, a:visited {
+  color: white;
 }
 
 body {
@@ -32,26 +37,49 @@ main {
   grid-area: main;
   display: flex;
   flex-direction: column;
-  max-width: 960px;
+  max-width: 1270px;
   overflow-y: auto;
 }
 main h3 {
-  color: white;
-  font-weight: 400;
-  font-size: 1.5em;
-}
-main .main-links {
-  margin-bottom: 2rem;
+  font-weight: 500;
+  font-size: 1.7em;
 }
 main .main-links a {
   background: rgba(0, 0, 0, 0.3);
   width: 140px;
+}
+main .environments {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2.5rem;
+}
+main .environments ul {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+main .environments ul li {
+  border: solid 1px rgba(255, 255, 255, 0.2);
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  transition: border-color 0.1s ease-in-out;
+  font-size: 1rem;
+}
+main .environments ul li a {
+  text-decoration: none;
+}
+main .environments ul li:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
 }
 main .additional-links-wrapper {
   display: grid;
   grid-template-columns: 1fr minmax(20%, 20rem);
   gap: 6rem;
   padding-bottom: 6rem;
+  overflow-y: auto;
 }
 main .main-links, main .additional-links {
   display: flex;
@@ -66,9 +94,8 @@ main .main-links a, main .additional-links a {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  padding: 1rem 2rem;
+  padding: 0.6rem 1.6rem;
   border-radius: 0.5rem;
-  color: white;
   text-decoration: none;
   font-size: 1rem;
 }
