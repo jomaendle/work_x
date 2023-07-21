@@ -10,6 +10,7 @@ html, body {
   height: 100%;
   margin: 0;
   color: white;
+  font-family:  Helvetica, sans-serif;
 }
 
 a, a:active, a:visited {
