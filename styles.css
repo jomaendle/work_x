@@ -3,7 +3,7 @@
 }
 
 html {
-  background: linear-gradient(180deg, #04547e 20%, #35b9eb);
+  background: linear-gradient(180deg, #99ccff 20%, #1fa5d8);
 }
 
 html,
@@ -11,7 +11,6 @@ body {
   height: 100%;
   margin: 0;
   color: white;
-  font-family: Helvetica, sans-serif;
 }
 
 a,
@@ -36,6 +35,10 @@ header {
 header .studysmarter-logo {
   width: 280px;
 }
+header .memberspot-logo {
+  height: 40px;
+  margin-right: 1rem;
+}
 
 main {
   grid-area: main;
@@ -47,9 +50,10 @@ main {
 main h3 {
   font-weight: 500;
   font-size: 1.7em;
+  color: #333;
 }
 main .main-links a {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.1);
   width: 140px;
 }
 main .environments {
@@ -64,7 +68,7 @@ main .environments ul {
   list-style: none;
 }
 main .environments ul li {
-  border: solid 1px rgba(255, 255, 255, 0.2);
+  border: solid 1px rgba(255, 255, 255, 0.4);
   padding: 0.4rem 0.8rem;
   border-radius: 10px;
   margin-bottom: 1rem;
@@ -75,12 +79,12 @@ main .environments ul li a {
   text-decoration: none;
 }
 main .environments ul li:hover {
-  border-color: rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.7);
   cursor: pointer;
 }
 main .additional-links-wrapper {
   display: grid;
-  grid-template-columns: 1fr minmax(20%, 20rem);
+  grid-template-columns: 4fr 1fr;
   gap: 6rem;
   padding-bottom: 6rem;
   overflow-y: auto;
@@ -105,9 +109,7 @@ main .additional-links a {
   text-decoration: none;
   font-size: 1rem;
 }
-main .main-links a:visited,
-main .main-links a:hover,
-main .main-links a:active,
+main .main-links a:visited, main .main-links a:hover, main .main-links a:active,
 main .additional-links a:visited,
 main .additional-links a:hover,
 main .additional-links a:active {
@@ -116,7 +118,7 @@ main .additional-links a:active {
 main .main-links a:hover,
 main .additional-links a:hover {
   transition: all 0.1s ease-in;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.2);
   border-color: rgba(255, 255, 255, 0.4);
 }
 main .main-links a img,
